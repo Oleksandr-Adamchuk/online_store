@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Cook | Cook</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link media="all" type="text/css" rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
   </head>
 
-  <body>
+  <body id="cook" class="template-index scheme_1">
+
+<div style="display: none;" class="off" id="page_preloader"><div class="global_loader"></div></div>
+
+
+
+<!-- HEADER -->
+<header>
+<div class="container">
+	<div class="flexbox">
+		<!-- LOGO -->
+		<div id="logo" class="logo_main">
+			<a href="https://theme262-cookware.myshopify.com/">
+  				<img src="/assets/logo.png" alt="Cook">
+					<script>var pixelRatio=window.devicePixelRatio?window.devicePixelRatio:1,attr1x=$("#logo img").attr("src").replace(".png","@2x.png");$(window).on("load",function(){pixelRatio>1&&$("#logo img").attr("src",attr1x).attr("width","200px")});</script>
+			</a>
+		</div>
+		<!-- HEADER SEARCH -->
+		<div class="header_search">
+			<form action="/search" method="get" class="search_form">
+				<input value="Search store" id="search-field" name="q" placeholder="Search store" class="hint" type="text">
+				<button id="search-submit" type="submit" class="btn">Search</button>
+			</form>
+		</div>
+
+		<div class="header_right">
+			<!-- USER MENU -->
+			<ul class="header_user">
+				<li><a href="https://theme262-cookware.myshopify.com/account/login">My account</a></li>
+							<!-- <li class="wishlist"><a href="/pages/wishlist">Wishlist</a></li> -->
+					
+				<li class="checkout"><a href="https://theme262-cookware.myshopify.com/cart">Checkout</a></li>
+			</ul>
+							<!-- CURRENCY SWITCHER-->
+				<div class="header_currency">
+					<div id="currencies-styler" class="jq-selectbox jqselect" style="display: inline-block; position: relative; z-index:100">
+  			      <select style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;" id="currencies" name="currencies">
+  							<option value="USD" selected="selected">USD</option>
+  							<option value="EUR">EUR</option>
+  							<option value="GBP">GBP</option>
+  						</select><div class="jq-selectbox__select" style="position: relative"><div class="jq-selectbox__select-text">USD</div><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div><i class="fa fa-angle-down"></i></div></div><div class="jq-selectbox__dropdown" style="position: absolute; display: none;"><ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden"><li style="display: block; white-space: nowrap;" class="selected sel">USD</li><li style="display: block; white-space: nowrap;" class="">EUR</li><li style="display: block; white-space: nowrap;" class="">GBP</li></ul></div></div>
+				</div>
+			
+			<!-- HEADER CUSTOM BLOCK -->
+			<div class="header_custom">
+				
+					<span class="icon material-design-phone370"></span>
+				
+				<a href="callto:800-2345-6789">800-2345-6789</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</header>
+
+
     <%= yield %>
+    
+    
   </body>
 </html>
