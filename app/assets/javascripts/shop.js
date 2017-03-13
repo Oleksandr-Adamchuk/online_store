@@ -1,19 +1,11 @@
+
 jQuery(function($){
-
-	$('html').removeClass('no-js'); 
-
-
-
-
-	// OUTDATED MSIE NOTIFICATION
-	if ( $.browser.msie && $.browser.version >= 8 && $.browser.version <= 10 ) {
-		$('body').prepend('<div class="old_browsers"><a href="//windows.microsoft.com/en-us/internet-explorer/download-ie"><i class="fa fa-warning"></i><b>You are using an outdated version of Internet Explorer.</b><span>For a faster, safer browsing experience</span><span class="btn">upgrade now</span> </a></div>');
-	};
-
-
-
+  
+	 $('html').removeClass('no-js'); 
 
 	// PRELOADER
+	
+	
 	$(window).load(function() {
 		$('#page_preloader').addClass('off');
 

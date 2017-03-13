@@ -96,7 +96,7 @@ body {
     z-index: 1001;
 }
 .scheme_1 .global_loader::after {
-    background: rgba(0, 0, 0, 0) url("fancybox_loading.gif") no-repeat scroll 50% 50%;
+    background: rgba(0, 0, 0, 0) url("/assets/preloader.gif") no-repeat scroll 50% 50%;
     content: "";
     display: block;
     height: 100%;
