@@ -9,11 +9,13 @@
     
     <link media="all" type="text/css" rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.js"></script>
   </head>
 
   <body id="cook" class="template-index scheme_1">
-
 <div style="display: block;" class="on" id="page_preloader"><div class="global_loader"></div></div>
+
 
 
 
@@ -67,9 +69,29 @@
 </div>
 </header>
 
+   <div id="main" role="main">
+	<div class="container">
+	<div class="row">
 	<%= render '/shared/navtop' %>
     <%= yield %>
+	<div class="main_content  col-sm-9 col-sm-push-3">
+	
     
-    
-  </body>
+<script>
+	$(document).ready(function () {
+	  alert('Slider!')
+	   var mySwiper = new Swiper('#swiper', {
+ 	       effect: 'fade',
+	       autoplay: 30000,
+	       loop: true,
+ 	       speed: 500,
+ 	       autoplayDisableOnInteraction: false,
+	       paginationClickable: true,
+	       prevButton: '#swiper_btn_prev',
+ 	       nextButton: '#swiper_btn_next',
+	       
+	   });
+ 	});
+</script>
+</body>
 </html>

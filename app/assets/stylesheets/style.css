@@ -1247,6 +1247,7 @@ body {
     flex: 0 0 auto;
 }
 .scheme_1 .header_stuck {
+    height: 50px;
     background: #374046 none repeat scroll 0 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
     position: relative;
@@ -1364,6 +1365,7 @@ body {
 .scheme_1 #megamenu.megamenu_desktop .level_2_small__wrap {
     position: relative;
 }
+
 .scheme_1 #megamenu.megamenu_desktop .level_2_wrap {
     background: #f5f4f4 none repeat scroll 0 0;
     display: none;
@@ -3833,17 +3835,7 @@ body {
     left: -3px
 }
 
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
+
 
 
 

@@ -1,0 +1,8 @@
+.level_1_item ul {
+  transition: all 0.5s ease-in-out !important; 
+}
+
+.level_1_item:hover  ul {
+  display: block 
+  
+}

@@ -1,5 +1,63 @@
-<h2>Hello world</h2>
+<h2>Index Action</h2>
 
+<%= render '/shared/navleft'%>
 
+<div class="swiper-container swiper-container-horizontal swiper-container-fade" id="swiper">
+		<div class="swiper-wrapper" style="transition-duration: 0ms;">
+			<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 870px; transform: translate3d(0px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+				<img alt="" src="a_data/slide3_image.jpg">
+				<div class="slider_caption">
+					<h2>New Cooking Essentials</h2>
+					<p>Your source for professional-quality cookware. Shop for kitchen appliances, cooking essentials from the comfort of your home. See the latest deals on selected products.</p><a class="btn" href="https://theme262-cookware.myshopify.com/collections/cooking-utensils">Shop now!</a>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 870px; transform: translate3d(-870px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+				<img alt="" src="/assets/slide1_image.jpg">
+				<div class="slider_caption">
+					<h2>Stainless Steel Cookware Set</h2>
+					<p>Your source for professional-quality cookware. Shop for kitchen appliances, cooking essentials from the comfort of your home. See the latest deals on selected products.</p><a class="btn" href="https://theme262-cookware.myshopify.com/collections/bakeware">Shop now!</a>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 870px; transform: translate3d(-1740px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+				<img alt="" src="/assets/slide2_image.jpg">
+				<div class="slider_caption">
+					<h2>Must-haves for any cook</h2>
+					<p>Your source for professional-quality cookware. Shop for kitchen appliances, cooking essentials from the comfort of your home. See the latest deals on selected products.</p><a class="btn" href="https://theme262-cookware.myshopify.com/collections/cookware-sets">Shop now!</a>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 870px; transform: translate3d(-2610px, 0px, 0px); opacity: 0; transition-duration: 0ms;">
+				<img alt="" src="/assets/slide3_image.jpg">
+				<div class="slider_caption">
+					<h2>New Cooking Essentials</h2>
+					<p>Your source for professional-quality cookware. Shop for kitchen appliances, cooking essentials from the comfort of your home. See the latest deals on selected products.</p><a class="btn" href="https://theme262-cookware.myshopify.com/collections/cooking-utensils">Shop now!</a>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 870px; transform: translate3d(-3480px, 0px, 0px); opacity: 0; transition-duration: 0ms;">
+				<img alt="" src="/assets/slide1_image.jpg">
+				<div class="slider_caption">
+					<h2>Stainless Steel Cookware Set</h2>
+					<p>Your source for professional-quality cookware. Shop for kitchen appliances, cooking essentials from the comfort of your home. See the latest deals on selected products.</p><a class="btn" href="https://theme262-cookware.myshopify.com/collections/bakeware">Shop now!</a>
+				</div>
+			</div>
+		</div>
+		<div class="swiper_btn" id="swiper_btn_prev"></div>
+		<div class="swiper_btn" id="swiper_btn_next"></div>
+	</div>
+<script>
+	$(document).ready(function () {
+	  alert('Slider!')
+	   var mySwiper = new Swiper('#swiper', {
+ 	       effect: 'fade',
+	       autoplay: 30000,
+	       loop: true,
+ 	       speed: 500,
+ 	       autoplayDisableOnInteraction: false,
+	       paginationClickable: true,
+	       prevButton: '#swiper_btn_prev',
+ 	       nextButton: '#swiper_btn_next',
+	       
+	   });
+ 	});
+</script>
 
 
