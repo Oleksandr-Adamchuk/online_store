@@ -3,10 +3,30 @@ jQuery(function($){
   
 	 $('html').removeClass('no-js'); 
 
+
+
+	$(document).ready(function ($) {
+	  alert('Slider!')
+	   var mySwiper = new Swiper('#swiper', {
+ 	       effect: 'fade',
+	       autoplay: 30000,
+	       loop: true,
+ 	       speed: 500,
+ 	       autoplayDisableOnInteraction: false,
+	       paginationClickable: true,
+	       prevButton: '#swiper_btn_prev',
+ 	       nextButton: '#swiper_btn_next',
+	       
+	   });
+ 	});
+ 	
+
+
 	// PRELOADER
 	
 	
-	$(window).load(function() {
+	// $(window).load(function()
+	$(document).on('turbolinks:load', function() {
 		$('#page_preloader').addClass('off');
 
 		setTimeout( function() { 
