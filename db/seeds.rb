@@ -5,3 +5,41 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+include Faker
+
+images_all = Dir.glob("app/assets/images/*.png")
+
+arr_of_medium_images = Array.new
+
+images_all.each do |i| 
+  if (/medium/ =~ i)
+    arr_of_medium_images << i
+  end
+end
+
+images = []
+arr_of_medium_images.each do |elem|
+  elem[0..17] = ''
+  images << elem
+end
+puts images
+
+Product.destroy_all
+
+50.times do 
+  product = Product.create(
+                          name: "#{Commerce.product_name}",
+                          description: "#{Lorem.paragraph(sentence_count = 10)}",
+                          price: rand(5..150),
+                          cost:  rand(5..150),
+                          qty: rand(1..1000),
+                          weight: rand(1..20),
+                          image: images[rand(images.length)]
+                          
+                          )
+      puts product.inspect
+end
+
+ 

@@ -72,16 +72,15 @@ jQuery(function($) {
 	
 	// MAIN PRODUCT LISTING IMAGE CHANGE
 		imgChange = function (){
-		if ( true )  {
-			alert('imsge');
-			$(document).on({ mouseenter: function(){$(this).find(".img__2").stop().animate({"opacity": 1});
-			    },
-			    mouseleave: function(){
-			        $(this).find(".img__2").stop().animate({"opacity": 0});
+		
+			$(document).on({ mouseenter: function(){
+				$(this).find(".img__2").stop().animate({"opacity": 1});
+			    },   mouseleave: function(){$(this).find(".img__2").stop().animate({"opacity": 0});
 			    }
 			}, '.img_change');
-		}
+
 	};
+	
 	$(window).load( imgChange );
 
 	// BACK TO TOP BUTTON 

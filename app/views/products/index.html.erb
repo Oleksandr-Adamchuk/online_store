@@ -38,6 +38,7 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+	
 	<h1 class="page_heading">Cookware</h1>
 	<ul class="tags clearfix">
 		<li class="active">
@@ -75,29 +76,31 @@
 			<div class="product col-xs-6 col-sm-6 col-md-4 product_collection item3_1 item2_1">
 				<div class="product_wrapper">
 					<div class="product_img">
-						<%= link_to product_path(:id), class: 'img_change' do %>
+						<div class="img_change"> 
 								<span class="img_change_wrapper">
-									<%= link_to image_tag('/assets/carter_cocktail_shaker_1_medium.png'), product_path(:id), {alt: 'Carter Cocktail Shaker'} %>
-									<%= link_to image_tag('/assets/carter_cocktail_shaker_2_medium.png'), product_path(:id), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
+									<!-- Підтягнути фотки з бази -->
+									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker'} %>
+									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
 								</span> 
 								<span class="product_badge new">New</span>
-						<% end %>
+						</div>
 					
 					</div>
 					<div class="product_info">
 						<div class="product_price">
-							<span class="money">$23.00</span>
+							<span class="money"><%= number_to_currency(product.price) %></span>
 						</div>
 						<div class="product_name">
-							<a href="/collections/cookware/products/carter-cocktail-shaker" title="Carter Cocktail Shaker">Carter Cocktail Shaker</a>
-						</div>
-						<div class="product_desc product_desc__long">
-							Kitchen Supplies store Those were the times when people still preferred to buy products at brick-and-mortar stores instead of buying online. Nevertheless we’ve decided to create an online shop and we are so glad to welcome you here, at our online Kitchen Supplies store. Yes, we agree that selling food and kitchen equipment is a tricky thing but ...
+							<%= link_to product.name, product_path(product), title: "Carter Cocktail Shaker" %>
+							
 						</div>
 						<div class="product_desc product_desc__short">
-							Kitchen Supplies store Those were the time...
+							<%= truncate(product.description, length: 60) %>
+						
 						</div>
+						
 						<div class="product_links">
+							<!-- СТВОРИТИ ФОРМУ НА КНОПКУ КОРЗИНИ !!!!!!! -->
 							<form action="/cart/add" method="post">
 								<input name="id" type="hidden" value="25848340359"> <button class="btn btn-cart" title="Add to cart" type="submit"><i class="icon material-design-shopping232"></i>Add to cart</button>
 							</form>

@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "font-awesome-rails"
 gem 'material_icons'
+gem 'faker', '~> 1.7', '>= 1.7.3'
 
 
 
