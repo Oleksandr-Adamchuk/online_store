@@ -38,8 +38,6 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
-
 	<h1 class="page_heading">Cookware</h1>
 	<ul class="tags clearfix">
 		<li class="active">
@@ -72,10 +70,19 @@
 	</div>
 	<div id="collection_sorted" style="opacity: 1;">
 		<div class="product_listing_main">
+			<% @products.each do |product| %>
+			
 			<div class="product col-xs-6 col-sm-6 col-md-4 product_collection item3_1 item2_1">
 				<div class="product_wrapper">
 					<div class="product_img">
-						<a class="img_change" href="/collections/cookware/products/carter-cocktail-shaker"><span class="img_change_wrapper"><img alt="Carter Cocktail Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_cocktail_shaker_1_medium.png?v=1469532793"> <img alt="Carter Cocktail Shaker" class="img__2" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_cocktail_shaker_2_medium.png?v=1469532793" style="opacity: 0;"></span> <span class="product_badge new">New</span></a>
+						<%= link_to product_path(:id), class: 'img_change' do %>
+								<span class="img_change_wrapper">
+									<%= link_to image_tag('/assets/carter_cocktail_shaker_1_medium.png'), product_path(:id), {alt: 'Carter Cocktail Shaker'} %>
+									<%= link_to image_tag('/assets/carter_cocktail_shaker_2_medium.png'), product_path(:id), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
+								</span> 
+								<span class="product_badge new">New</span>
+						<% end %>
+					
 					</div>
 					<div class="product_info">
 						<div class="product_price">
@@ -101,7 +108,7 @@
 					</div>
 				</div>
 			</div>
-			
+			<% end %>
 			
 		</div>
 		</div>
