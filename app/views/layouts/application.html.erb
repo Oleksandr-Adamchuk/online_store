@@ -16,19 +16,17 @@
   <body class="template-collection scheme_1 subpage" id="cookware">
 <div style="display: block;" class="on" id="page_preloader"><div class="global_loader"></div></div>
 
-
-
-
 <!-- HEADER -->
 <header>
 <div class="container">
 	<div class="flexbox">
 		<!-- LOGO -->
 		<div id="logo" class="logo_main">
-			<a href="https://theme262-cookware.myshopify.com/">
-  				<img src="/assets/logo.png" alt="Cook">
-					<script>var pixelRatio=window.devicePixelRatio?window.devicePixelRatio:1,attr1x=$("#logo img").attr("src").replace(".png","@2x.png");$(window).on("load",function(){pixelRatio>1&&$("#logo img").attr("src",attr1x).attr("width","200px")});</script>
-			</a>
+			<%= link_to image_tag("/assets/logo.png"), root_path, alt: 'Cook' %>
+	
+  			
+			
+			
 		</div>
 		<!-- HEADER SEARCH -->
 		<div class="header_search">
@@ -70,18 +68,12 @@
 </header>
 
    <div id="main" role="main">
-	<div class="container">
-	<div class="row">
-	<%= render '/shared/navtop' %>
-   <div class="main_content  col-sm-9 col-sm-push-3">
-    <%= yield %>
-
-	
-    
-
-</div>
-</div>
-</div>
-</div>
+		<div class="container">
+			<div class="row">
+				<%= render '/shared/navtop' %>
+			     <%= yield %>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

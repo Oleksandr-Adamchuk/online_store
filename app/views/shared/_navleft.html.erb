@@ -1,1 +1,574 @@
-<h2>Aside</h2>  
+
+		<div class="sidebar_widget sidebar_widget__collections">
+			<h3 class="widget_header">Collections</h3>
+			<div class="widget_content">
+				<ul class="list_links">
+						<% @category.each do |category| %>
+					    <li>
+					      <%= link_to category.name, category_path(category) %>
+					    </li>
+					 	<% end %>
+			     
+					    <li>
+					      <%= link_to 'View all collections', categories_path %>
+					    </li>
+					 	
+						
+					
+				</ul>
+			</div>
+		</div>
+		<div class="sidebar_widget sidebar_widget__products sidebar_widget__products_2">
+			<h3 class="widget_header">Specials</h3>
+			<div class="widget_content">
+				<div class="list_products list_products_4 swiper-container-vertical">
+					<ul class="swiper-wrapper" style="transform: translate3d(0px, -567px, 0px); transition-duration: 0ms;">
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/expandable-bamboo-gadget-tray"><img alt="Expandable Bamboo Gadget Tray" src="//cdn.shopify.com/s/files/1/1398/6279/products/expandable_bamboo_gadget_tray_1_small.png?v=1469532876"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$16.00">$16.00</span> <span class="money compare-at-price" data-currency-usd="$22.00">$22.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/expandable-bamboo-gadget-tray">Expandable Bamboo Gadget Tray</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/fsc-teak-rectangular-cutting-board-s-with-well"><img alt="FSC Teak Rectangular Cutting Boards with Well" src="//cdn.shopify.com/s/files/1/1398/6279/products/fsc_teak_rectangular_cutting_board_s_with_well_1_small.png?v=1469532900"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$15.00">$15.00</span> <span class="money compare-at-price" data-currency-usd="$16.00">$16.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/fsc-teak-rectangular-cutting-board-s-with-well">FSC Teak Rectangular Cuttin...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="10" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/kuhn-rikon-cookie-press-and-decorating-kit"><img alt="Kuhn Rikon Cookie Press and Decorating Kit" src="//cdn.shopify.com/s/files/1/1398/6279/products/kuhn_rikon_cookie_press_and_decorating_kit_1_small.png?v=1469532926"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$18.00">$18.00</span> <span class="money compare-at-price" data-currency-usd="$19.00">$19.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/kuhn-rikon-cookie-press-and-decorating-kit">Kuhn Rikon Cookie Press and...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="11" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/oxo-3-in-1-avocado-tool"><img alt="OXO 3 In 1 Avocado Tool" src="//cdn.shopify.com/s/files/1/1398/6279/products/oxo_3_in_1_avocado_tool_1_small.png?v=1469532937"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$25.00">$25.00</span> <span class="money compare-at-price" data-currency-usd="$26.00">$26.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/oxo-3-in-1-avocado-tool">OXO 3 In 1 Avocado Tool</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/10-piece-oxo-holder-with-tool-s-set"><img alt="10 Piece OXO Holder with Tools Set" src="//cdn.shopify.com/s/files/1/1398/6279/products/10_piece_oxo_holder_with_tool_s_set_1_small.png?v=1469532749"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$15.00">$15.00</span> <span class="money compare-at-price" data-currency-usd="$25.00">$25.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/10-piece-oxo-holder-with-tool-s-set">10 Piece OXO Holder with T...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/5-piece-inches-nesting-mixing-bowl-set"><img alt="5 Piece Inches Nesting Mixing Bowl Set" src="//cdn.shopify.com/s/files/1/1398/6279/products/5_piece_inches_nesting_mixing_bowl_set_1_small.png?v=1469532724"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$14.00">$14.00</span> <span class="money compare-at-price" data-currency-usd="$15.00">$15.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/5-piece-inches-nesting-mixing-bowl-set">5 Piece Inches Nesting Mixi...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="2" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/anti-freeze-ice-cream"><img alt="Anti Freeze Ice Cream Scoop" src="//cdn.shopify.com/s/files/1/1398/6279/products/anti_freeze_ice_cream_1_small.png?v=1469532760"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$23.00">$23.00</span> <span class="money compare-at-price" data-currency-usd="$45.00">$45.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/anti-freeze-ice-cream">Anti Freeze Ice Cream Scoop</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="3" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/boston-shaker"><img alt="Boston Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/boston_shaker_1_small.png?v=1469532781"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$89.00">$89.00</span> <span class="money compare-at-price" data-currency-usd="$92.00">$92.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/boston-shaker">Boston Shaker</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="4" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/carter-double-walled-ice-bucket"><img alt="Carter Double Walled Ice Bucket" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_double_walled_ice_bucket_1_small.png?v=1469532805"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$26.00">$26.00</span> <span class="money compare-at-price" data-currency-usd="$32.00">$32.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/carter-double-walled-ice-bucket">Carter Double Walled Ice Bu...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="5" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/chef-n-buttercup-butter-maker"><img alt="Chef'n Buttercup ™ Butter Maker" src="//cdn.shopify.com/s/files/1/1398/6279/products/chef_n_buttercup_butter_maker_1_small.png?v=1469532816"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$56.00">$56.00</span> <span class="money compare-at-price" data-currency-usd="$69.00">$69.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/chef-n-buttercup-butter-maker">Chef'n Buttercup &trade; Butter ...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="6" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/end-grain-board"><img alt="End Grain Board" src="//cdn.shopify.com/s/files/1/1398/6279/products/end_grain_board_1_small.png?v=1469532839"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$21.00">$21.00</span> <span class="money compare-at-price" data-currency-usd="$24.00">$24.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/end-grain-board">End Grain Board</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="7" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/expandable-bamboo-flatware-tray"><img alt="Expandable Bamboo Flatware Tray" src="//cdn.shopify.com/s/files/1/1398/6279/products/expandable_bamboo_flatware_tray_1_small.png?v=1469532865"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$18.00">$18.00</span> <span class="money compare-at-price" data-currency-usd="$24.00">$24.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/expandable-bamboo-flatware-tray">Expandable Bamboo Flatware ...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="8" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/expandable-bamboo-gadget-tray"><img alt="Expandable Bamboo Gadget Tray" src="//cdn.shopify.com/s/files/1/1398/6279/products/expandable_bamboo_gadget_tray_1_small.png?v=1469532876"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$16.00">$16.00</span> <span class="money compare-at-price" data-currency-usd="$22.00">$22.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/expandable-bamboo-gadget-tray">Expandable Bamboo Gadget Tray</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="9" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/fsc-teak-rectangular-cutting-board-s-with-well"><img alt="FSC Teak Rectangular Cutting Boards with Well" src="//cdn.shopify.com/s/files/1/1398/6279/products/fsc_teak_rectangular_cutting_board_s_with_well_1_small.png?v=1469532900"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$15.00">$15.00</span> <span class="money compare-at-price" data-currency-usd="$16.00">$16.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/fsc-teak-rectangular-cutting-board-s-with-well">FSC Teak Rectangular Cuttin...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="10" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/kuhn-rikon-cookie-press-and-decorating-kit"><img alt="Kuhn Rikon Cookie Press and Decorating Kit" src="//cdn.shopify.com/s/files/1/1398/6279/products/kuhn_rikon_cookie_press_and_decorating_kit_1_small.png?v=1469532926"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$18.00">$18.00</span> <span class="money compare-at-price" data-currency-usd="$19.00">$19.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/kuhn-rikon-cookie-press-and-decorating-kit">Kuhn Rikon Cookie Press and...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="11" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/oxo-3-in-1-avocado-tool"><img alt="OXO 3 In 1 Avocado Tool" src="//cdn.shopify.com/s/files/1/1398/6279/products/oxo_3_in_1_avocado_tool_1_small.png?v=1469532937"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$25.00">$25.00</span> <span class="money compare-at-price" data-currency-usd="$26.00">$26.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/oxo-3-in-1-avocado-tool">OXO 3 In 1 Avocado Tool</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/10-piece-oxo-holder-with-tool-s-set"><img alt="10 Piece OXO Holder with Tools Set" src="//cdn.shopify.com/s/files/1/1398/6279/products/10_piece_oxo_holder_with_tool_s_set_1_small.png?v=1469532749"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$15.00">$15.00</span> <span class="money compare-at-price" data-currency-usd="$25.00">$25.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/10-piece-oxo-holder-with-tool-s-set">10 Piece OXO Holder with T...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/5-piece-inches-nesting-mixing-bowl-set"><img alt="5 Piece Inches Nesting Mixing Bowl Set" src="//cdn.shopify.com/s/files/1/1398/6279/products/5_piece_inches_nesting_mixing_bowl_set_1_small.png?v=1469532724"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$14.00">$14.00</span> <span class="money compare-at-price" data-currency-usd="$15.00">$15.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/5-piece-inches-nesting-mixing-bowl-set">5 Piece Inches Nesting Mixi...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/anti-freeze-ice-cream"><img alt="Anti Freeze Ice Cream Scoop" src="//cdn.shopify.com/s/files/1/1398/6279/products/anti_freeze_ice_cream_1_small.png?v=1469532760"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$23.00">$23.00</span> <span class="money compare-at-price" data-currency-usd="$45.00">$45.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/anti-freeze-ice-cream">Anti Freeze Ice Cream Scoop</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/boston-shaker"><img alt="Boston Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/boston_shaker_1_small.png?v=1469532781"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$89.00">$89.00</span> <span class="money compare-at-price" data-currency-usd="$92.00">$92.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/boston-shaker">Boston Shaker</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar_widget__products2_btn_prev sidebar_btn_prev"></div>
+				<div class="sidebar_widget__products2_btn_next sidebar_btn_next"></div>
+			</div>
+		</div>
+		<div class="sidebar_widget sidebar_widget__products sidebar_widget__products_1">
+			<h3 class="widget_header">Best sellers</h3>
+			<div class="widget_content">
+				<div class="list_products list_products_4 swiper-container-vertical">
+					<ul class="swiper-wrapper" style="transform: translate3d(0px, -567px, 0px); transition-duration: 0ms;">
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/chef-n-buttercup-butter-maker"><img alt="Chef'n Buttercup ™ Butter Maker" src="//cdn.shopify.com/s/files/1/1398/6279/products/chef_n_buttercup_butter_maker_1_small.png?v=1469532816"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$56.00">$56.00</span> <span class="money compare-at-price" data-currency-usd="$69.00">$69.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/chef-n-buttercup-butter-maker">Chef'n Buttercup &trade; Butter ...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/cupcake-corer"><img alt="Cupcake Corer" src="//cdn.shopify.com/s/files/1/1398/6279/products/cupcake_corer_1_small.png?v=1469532827"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$56.00">$56.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/cupcake-corer">Cupcake Corer</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/end-grain-board"><img alt="End Grain Board" src="//cdn.shopify.com/s/files/1/1398/6279/products/end_grain_board_1_small.png?v=1469532839"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$21.00">$21.00</span> <span class="money compare-at-price" data-currency-usd="$24.00">$24.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/end-grain-board">End Grain Board</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="7" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/end-grain-chopping-board"><img alt="End Grain Chopping Board" src="//cdn.shopify.com/s/files/1/1398/6279/products/end_grain_chopping_board_1_small.png?v=1469532852"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$80.00">$80.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/end-grain-chopping-board">End Grain Chopping Board</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/batter-dispenser"><img alt="Batter Dispenser" src="//cdn.shopify.com/s/files/1/1398/6279/products/batter_dispenser_1_small.png?v=1469532771"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$65.00">$65.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/batter-dispenser">Batter Dispenser</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/boston-shaker"><img alt="Boston Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/boston_shaker_1_small.png?v=1469532781"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$89.00">$89.00</span> <span class="money compare-at-price" data-currency-usd="$92.00">$92.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/boston-shaker">Boston Shaker</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="2" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/carter-cocktail-shaker"><img alt="Carter Cocktail Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_cocktail_shaker_1_small.png?v=1469532793"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$23.00">$23.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/carter-cocktail-shaker">Carter Cocktail Shaker</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="3" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/carter-double-walled-ice-bucket"><img alt="Carter Double Walled Ice Bucket" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_double_walled_ice_bucket_1_small.png?v=1469532805"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$26.00">$26.00</span> <span class="money compare-at-price" data-currency-usd="$32.00">$32.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/carter-double-walled-ice-bucket">Carter Double Walled Ice Bu...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="4" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/chef-n-buttercup-butter-maker"><img alt="Chef'n Buttercup ™ Butter Maker" src="//cdn.shopify.com/s/files/1/1398/6279/products/chef_n_buttercup_butter_maker_1_small.png?v=1469532816"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$56.00">$56.00</span> <span class="money compare-at-price" data-currency-usd="$69.00">$69.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/chef-n-buttercup-butter-maker">Chef'n Buttercup &trade; Butter ...</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="5" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/cupcake-corer"><img alt="Cupcake Corer" src="//cdn.shopify.com/s/files/1/1398/6279/products/cupcake_corer_1_small.png?v=1469532827"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$56.00">$56.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/cupcake-corer">Cupcake Corer</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="6" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/end-grain-board"><img alt="End Grain Board" src="//cdn.shopify.com/s/files/1/1398/6279/products/end_grain_board_1_small.png?v=1469532839"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$21.00">$21.00</span> <span class="money compare-at-price" data-currency-usd="$24.00">$24.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/end-grain-board">End Grain Board</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide" data-swiper-slide-index="7" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/end-grain-chopping-board"><img alt="End Grain Chopping Board" src="//cdn.shopify.com/s/files/1/1398/6279/products/end_grain_chopping_board_1_small.png?v=1469532852"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$80.00">$80.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/end-grain-chopping-board">End Grain Chopping Board</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/batter-dispenser"><img alt="Batter Dispenser" src="//cdn.shopify.com/s/files/1/1398/6279/products/batter_dispenser_1_small.png?v=1469532771"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$65.00">$65.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/batter-dispenser">Batter Dispenser</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/boston-shaker"><img alt="Boston Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/boston_shaker_1_small.png?v=1469532781"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$89.00">$89.00</span> <span class="money compare-at-price" data-currency-usd="$92.00">$92.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/boston-shaker">Boston Shaker</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/carter-cocktail-shaker"><img alt="Carter Cocktail Shaker" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_cocktail_shaker_1_small.png?v=1469532793"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money" data-currency-usd="$23.00">$23.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/carter-cocktail-shaker">Carter Cocktail Shaker</a>
+								</div>
+							</div>
+						</li>
+						<li class="product swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="height: 141.75px;">
+							<div class="product_img">
+								<a href="/products/carter-double-walled-ice-bucket"><img alt="Carter Double Walled Ice Bucket" src="//cdn.shopify.com/s/files/1/1398/6279/products/carter_double_walled_ice_bucket_1_small.png?v=1469532805"></a>
+							</div>
+							<div class="product_info">
+								<div class="product_price">
+									<span class="money money_present" data-currency-usd="$26.00">$26.00</span> <span class="money compare-at-price" data-currency-usd="$32.00">$32.00</span>
+								</div>
+								<div class="product_name">
+									<a href="/products/carter-double-walled-ice-bucket">Carter Double Walled Ice Bu...</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar_widget__products1_btn_prev sidebar_btn_prev"></div>
+				<div class="sidebar_widget__products1_btn_next sidebar_btn_next"></div>
+			</div>
+		</div>
+		<script>
+		  jQuery(document).ready(function($) {
+		  
+		    if ($('.sidebar_widget__products_1 .product').length &gt; 4) {
+		      var sidebar_widget_products1_swiper = new Swiper('.sidebar_widget__products_1 .list_products', {
+		          loop: true,
+		          speed: 500,
+		          prevButton: '.sidebar_widget__products1_btn_prev',
+		          nextButton: '.sidebar_widget__products1_btn_next',
+		          direction: "vertical",
+		          
+		          slidesPerView: 4,
+		          breakpoints: {
+		              767: {
+		                  slidesPerView: 1
+		              }
+		          }
+		          
+		      });
+
+		      $('.sidebar_widget__products1_btn_prev').on('click', function() {
+		          sidebar_widget_products1_swiper.slidePrev();
+		      });
+
+		      $('.sidebar_widget__products1_btn_next').on('click', function() {
+		          sidebar_widget_products1_swiper.slideNext();
+		      });
+		    } else {
+		      $(".sidebar_widget__products1_btn_prev, .sidebar_widget__products1_btn_next").hide();
+		    }
+		  
+
+		  
+		    if ($('.sidebar_widget__products_2 .product').length &gt; 4) {
+		      var sidebar_widget_products2_swiper = new Swiper('.sidebar_widget__products_2 .list_products', {
+		          loop: true,
+		          speed: 500,
+		          prevButton: '.sidebar_widget__products2_btn_prev',
+		          nextButton: '.sidebar_widget__products2_btn_next',
+		          direction: "vertical",
+		          
+		          slidesPerView: 4,
+		          breakpoints: {
+		              767: {
+		                  slidesPerView: 1
+		              }
+		          }
+		          
+		      });
+
+		      $('.sidebar_widget__products2_btn_prev').on('click', function() {
+		          sidebar_widget_products2_swiper.slidePrev();
+		      });
+
+		      $('.sidebar_widget__products2_btn_next').on('click', function() {
+		          sidebar_widget_products2_swiper.slideNext();
+		      });
+		    } else {
+		      $(".sidebar_widget__products2_btn_prev, .sidebar_widget__products2_btn_next").hide();
+		    }
+		  
+
+		  });
+		</script>

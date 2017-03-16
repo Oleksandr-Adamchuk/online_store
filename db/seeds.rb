@@ -27,8 +27,22 @@ end
 puts images
 
 Product.destroy_all
+Category.destroy_all
 
-50.times do 
+category_arr = %w(Bakewar Cooking Utensils Cooks_Tools Cookware Cookware_sets Cutlery Dinnerware Electrics Gadgets Pans_&_Skillets Specials )
+
+puts category_arr
+category_arr.each do |categ|
+  category = Category.create!(
+                              name: categ,
+                              description: "#{Lorem.paragraph(sentence_count = 15)}",
+                              image: images[rand(images.length)]
+                             )
+               
+                 puts category.inspect
+end 
+
+200.times do 
   product = Product.create(
                           name: "#{Commerce.product_name}",
                           description: "#{Lorem.paragraph(sentence_count = 10)}",
@@ -36,10 +50,11 @@ Product.destroy_all
                           cost:  rand(5..150),
                           qty: rand(1..1000),
                           weight: rand(1..20),
-                          image: images[rand(images.length)]
+                          image: images[rand(images.length)],
+                          image_2: images[rand(images.length)],
+                          category_id: rand(1..11)
                           
                           )
-      puts product.inspect
+  puts product.inspect
 end
 
- 

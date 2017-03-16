@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Products</h1>
-
-
-<table>
+<div class="main_content  col-sm-9 col-sm-push-3">
+	<p id="notice"><%= notice %></p>
+	<h1>Products</h1>
+	<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -22,7 +20,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
-        <td><%= product.description %></td>
+        <td><%= truncate(product.description, length: 30) %></td>
         <td><%= product.cost %></td>
         <td><%= product.qty %></td>
         <td><%= product.weight %></td>
@@ -34,12 +32,9 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
-	
-	<h1 class="page_heading">Cookware</h1>
+	<br>
+	<%= link_to 'New Product', new_category_path %>
+		<h1 class="page_heading">Cookware</h1>
 	<ul class="tags clearfix">
 		<li class="active">
 			<a href="/collections/cookware">All</a>
@@ -65,7 +60,6 @@
 			</div>
 		</div>
 	</div><!-- products sorting -->
-	
 	<div class="loader_off" id="product_listing_preloader">
 		<div class="global_loader"></div>
 	</div>
@@ -80,7 +74,7 @@
 								<span class="img_change_wrapper">
 									<!-- Підтягнути фотки з бази -->
 									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker'} %>
-									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
+									<%= link_to image_tag(product.image_2), product_path(product), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
 								</span> 
 								<span class="product_badge new">New</span>
 						</div>
@@ -115,4 +109,8 @@
 			
 		</div>
 		</div>
-		
+</div>
+
+<div class="sidebar col-sm-3 sidebar_left col-sm-pull-9">
+   <%#= render '/shared/navleft' %>
+</div>

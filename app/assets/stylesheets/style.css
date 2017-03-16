@@ -3834,7 +3834,14 @@ body {
     top: 3px;
     left: -3px
 }
+/********************************/
+/******** CUSTOM STYLES *********/
+/********************************/
 
+.list_links li:last-child a {
+    font-weight: bold;
+    
+}
 
 
 

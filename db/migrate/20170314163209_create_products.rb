@@ -1,4 +1,5 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
+  
   def change
     create_table :products do |t|
       t.string :name
@@ -8,7 +9,6 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :qty
       t.decimal :weight, precision: 6, scale: 2
       t.string :image
-
       t.timestamps
     end
   end
