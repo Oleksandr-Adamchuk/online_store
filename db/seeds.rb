@@ -52,9 +52,17 @@ end
                           weight: rand(1..20),
                           image: images[rand(images.length)],
                           image_2: images[rand(images.length)],
-                          category_id: rand(1..11)
+                          category_id: rand(1..11),
+                          active: true
                           
                           )
   puts product.inspect
 end
+
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"
 
