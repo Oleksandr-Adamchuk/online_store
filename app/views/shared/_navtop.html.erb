@@ -9,168 +9,29 @@
 						<h2 id="megamenu_mobile_toggle">Cook<i></i></h2>
 						<ul class="level_1 sf-js-enabled sf-arrows">
 							<li class="level_1_item level_2_small__wrap">
-								<a class="level_1_link sf-with-ul active" href="https://theme262-cookware.myshopify.com/">Home <i class="level_1_trigger"></i></a>
+								<%= link_to root_path, {class: "level_1_link sf-with-ul active"} do %>
+									Home
+									<i class="level_1_trigger"></i>
+								<% end %>
+								
 								<ul class="level_2_wrap level_2_small megamenu_linklist" style="display: none;">
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/bakeware">Bakeware</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/cookware-sets">Cookware sets</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/cooking-utensils">Cooking Utensils</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/cooks-tools">Cooks' Tools</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/cookware">Cookware</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/cutlery">Cutlery</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/dinnerware">Dinnerware</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/electrics">Electrics</a>
-									</li>
-									<li>
-										<a href="https://theme262-cookware.myshopify.com/collections/gadgets">Gadgets</a>
-									</li>
+									<% @category = Category.all.each do |category| %>
+										<li>
+											<%= link_to category.name, category_products_path(category) %>
+										</li>
+									<% end %>
+									
+									
+							<!--		<%# @cat.each do |category| %>-->
+					  <!--  <li>-->
+					  <!--    <%#= link_to category.name, category_products_path(category) %>-->
+					  <!--  </li>-->
+					 	<!--<%# end %>-->
+								
+									
 								</ul>
 							</li>
-							<li class="level_1_item">
-								<%= link_to 'PRODUCTS', products_path, :class => "level_1_link sf-with-ul" %> <span class="menu_badge">hot deals</span> <i class="level_1_trigger"></i>
-								<ul class="level_2_wrap level_2_big" style="display: none;">
-									<li>
-										<div class="level_2 level_2_links">
-											<div class="column_item column_item__1">
-												<h5 class="level_2_trigger">Cookware <i></i></h5>
-												<ul class="level_3 megamenu_linklist">
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/bakeware" title="">Bakeware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cookware-sets" title="">Cookware sets</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cooking-utensils" title="">Cooking Utensils</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cooks-tools" title="">Cooks' Tools</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cookware" title="">Cookware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cutlery" title="">Cutlery</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/dinnerware" title="">Dinnerware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/electrics" title="">Electrics</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/gadgets" title="">Gadgets</a>
-													</li>
-												</ul>
-											</div>
-											<div class="column_item column_item__2">
-												<h5 class="level_2_trigger">Cutlery<i></i></h5>
-												<ul class="level_3 megamenu_linklist">
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cooking-utensils" title="">Cooking Utensils</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cooks-tools" title="">Cooks' Tools</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cookware" title="">Cookware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cutlery" title="">Cutlery</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/dinnerware" title="">Dinnerware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/electrics" title="">Electrics</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/gadgets" title="">Gadgets</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/frontpage" title="">Kitchen Storage &amp; Organization</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/pans-skillets" title="">Pans &amp; Skillets</a>
-													</li>
-												</ul>
-											</div>
-											<div class="column_item column_item__3">
-												<h5 class="level_2_trigger">Bakeware<i></i></h5>
-												<ul class="level_3 megamenu_linklist">
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/specials" title="">Specials</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/frontpage" title="">Kitchen Storage &amp; Organization</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/gadgets" title="">Gadgets</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/electrics" title="">Electrics</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/dinnerware" title="">Dinnerware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cutlery" title="">Cutlery</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cookware" title="">Cookware</a>
-													</li>
-												</ul>
-											</div>
-											<div class="column_item column_item__4">
-												<h5 class="level_2_trigger">Tabletop &amp; Serving<i></i></h5>
-												<ul class="level_3 megamenu_linklist">
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cutlery" title="">Cutlery</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/dinnerware" title="">Dinnerware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/electrics" title="">Electrics</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/gadgets" title="">Gadgets</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/frontpage" title="">Kitchen Storage &amp; Organization</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/pans-skillets" title="">Pans &amp; Skillets</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/specials" title="">Specials</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/bakeware" title="">Bakeware</a>
-													</li>
-													<li>
-														<a href="https://theme262-cookware.myshopify.com/collections/cookware-sets" title="">Cookware sets</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</li>
+						
 							<li class="level_1_item">
 								<a class="level_1_link sf-with-ul" href="https://theme262-cookware.myshopify.com/blogs/blog">Blog <i class="level_1_trigger"></i></a>
 								<ul class="level_2_wrap level_2_big" style="display: none;">
@@ -318,7 +179,8 @@
 						</ul>
 					</div><!-- HEADER CART -->
 					<div class="header_cart">
-						<a href="https://theme262-cookware.myshopify.com/cart"><span class="icon material-design-shopping232"></span><b>Cart</b> <span id="cart_items">0</span>item(s)</a>
+						<h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+						
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @cat = Category.first(5)
-    @products = Product.all
     @category = Category.find(params[:category_id])
     @products = @category.products
     @order_item = current_order.order_items.new

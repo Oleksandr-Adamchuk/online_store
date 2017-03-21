@@ -1910,7 +1910,7 @@ body {
 .scheme_1 .product_listing_main .product_links form .btn {
     padding: 0 10px;
     text-align: center;
-    width: 100%;
+    /*width: 100%;*/
 }
 .scheme_1 .product_listing_main .product_links .flexbox {
     justify-content: space-between;
@@ -2121,7 +2121,7 @@ body {
     display: block;
     height: 30px;
     left: 50%;
-    margin: 0 0 0 615px;
+    margin: 0 0 0 575px;
     position: fixed;
     text-align: center;
     width: 30px;
@@ -3841,6 +3841,9 @@ body {
 .list_links li:last-child a {
     font-weight: bold;
     
+}
+h1.cart-text {
+    margin-top: 0;
 }
 
 

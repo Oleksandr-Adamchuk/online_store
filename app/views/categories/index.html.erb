@@ -51,7 +51,8 @@
 					<h4 class="collection_name"><%= link_to category.name, category_products_path(category) %></h4>
 					<p class="collection_products"><%= category.products.count %> products</p>
 					<p class="collection_desc"><%= truncate(category.description, length: 25)%></p>
-					<a class="btn" href="/collections/bakeware">View products</a>
+					<%= link_to "View products", category_products_path(category), class: "btn" %>
+					
 				</div>
 			</div>
       <% end  %>

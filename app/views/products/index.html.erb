@@ -1,120 +1,73 @@
-
-
-
-
-<div class="main_content  col-sm-9 col-sm-push-3">
-	<p id="notice"><%= notice %></p>
-	<h1>Products</h1>
-	<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Cost</th>
-      <th>Qty</th>
-      <th>Weight</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= truncate(product.description, length: 30) %></td>
-        <td><%= product.cost %></td>
-        <td><%= product.qty %></td>
-        <td><%= product.weight %></td>
-        <td><%= product.image %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-	<br>
-	<%= link_to 'New Product', new_category_path %>
+<div class="main_content col-sm-9 col-sm-push-3">
+		<p id="notice"><%= notice %></p>
+		<h1>Products</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Description</th>
+					<th>Cost</th>
+					<th>Qty</th>
+					<th>Weight</th>
+					<th>Image</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<%@products.each do |product| %>
+				<tr>
+					<td><%= product.name %></td>
+					<td><%= product.price %></td>
+					<td><%= truncate(product.description, length: 30) %></td>
+					<td><%= product.cost %></td>
+					<td><%= product.qty %></td>
+					<td><%= product.weight %></td>
+					<td><%= product.image %></td>
+					<td><%= link_to 'Show', product %></td>
+					<td><%= link_to 'Edit', edit_product_path(product) %></td>
+					<td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr><%end %>
+			</tbody>
+		</table><br>
+		<%= link_to 'New Product', new_category_path %>
 		<h1 class="page_heading">Cookware</h1>
-	<ul class="tags clearfix">
-		<li class="active">
-			<a href="/collections/cookware">All</a>
-		</li>
-		<li>
-			<a href="/collections/cookware/candy-making-supplies" title="Show products matching tag Candy Making Supplies">Candy Making Supplies</a>
-		</li>
-		<li>
-			<a href="/collections/cookware/commercial-cookware" title="Show products matching tag Commercial Cookware">Commercial Cookware</a>
-		</li>
-		<li>
-			<a href="/collections/cookware/organizational-supplies" title="Show products matching tag Organizational Supplies">Organizational Supplies</a>
-		</li>
-		<li>
-			<a href="/collections/cookware/professional-cutlery" title="Show products matching tag Professional Cutlery">Professional Cutlery</a>
-		</li>
-	</ul><!-- collection image & description -->
-	<div class="row collection_info">
-		<div class="col-sm-3 collection_img"><img alt="Cookware" src="//cdn.shopify.com/s/files/1/1398/6279/collections/carter_cocktail_shaker_1_medium.png?v=1469534060"></div>
-		<div class="col-sm-9 collection_desc">
-			<div class="rte">
-				There is a common opinion that customer care service makes 90% of your reputation and we believe this to be a business truth. That’s why we are proud to inform you that you can always rely on our wonderful support system that is available 24/7. Every business is very demanding but the secret of success lies between the right choice of the business strategy and reliable suppliers.Those were the times when people still preferred to buy products at brick-and-mortar stores instead of buying online. Nevertheless we’ve decided to create an online shop and we are so glad to welcome you here. Kitchen Supplies store was founded by several enthusiasts in 2002.Taking care of our clients was and still is a main aim of our company and it will stay the same till the end of days.
-			</div>
-		</div>
-	</div><!-- products sorting -->
-	<div class="loader_off" id="product_listing_preloader">
-		<div class="global_loader"></div>
-	</div>
-	<div id="collection_sorted" style="opacity: 1;">
-		<div class="product_listing_main">
-			<% @products.each do |product| %>
-			
-			<div class="product col-xs-6 col-sm-6 col-md-4 product_collection item3_1 item2_1">
-				<div class="product_wrapper">
-					<div class="product_img">
-						<div class="img_change"> 
-								<span class="img_change_wrapper">
-									<!-- Підтягнути фотки з бази -->
-									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker'} %>
-									<%= link_to image_tag(product.image_2), product_path(product), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
-								</span> 
-								<span class="product_badge new">New</span>
-						</div>
-					
-					</div>
-					<div class="product_info">
-						<div class="product_price">
-							<span class="money"><%= number_to_currency(product.price) %></span>
-						</div>
-						<div class="product_name">
-							<%= link_to product.name, product_path(product), title: "Carter Cocktail Shaker" %>
-							
-						</div>
-						<div class="product_desc product_desc__short">
-							<%= truncate(product.description, length: 60) %>
-						
-						</div>
-						
-						<div class="product_links">
-							<!-- СТВОРИТИ ФОРМУ НА КНОПКУ КОРЗИНИ !!!!!!! -->
-							<form action="/cart/add" method="post">
-								<input name="id" type="hidden" value="25848340359"> <button class="btn btn-cart" title="Add to cart" type="submit"><i class="icon material-design-shopping232"></i>Add to cart</button>
-							</form>
-							<div class="flexbox">
-								<a class="btn btn_icon" href="/collections/cookware/products/carter-cocktail-shaker" title="View"><span class="material-design-list89"></span></a> <a class="btn btn_icon quick_view_btn" href="/products/carter-cocktail-shaker" title="Quick view"><i aria-hidden="true" class="material-design-visibility1"></i></a> <a class="btn_icon btn wishlist_add_login" href="/pages/wishlist" title="Add to the wishlist"><i aria-hidden="true" class="material-design-favorite22"></i></a>
-							</div>
-						</div>
-					</div>
+		<ul class="tags clearfix">
+			<li class="active">
+				<a href="/collections/cookware">All</a>
+			</li>
+			<li>
+				<a href="/collections/cookware/candy-making-supplies" title="Show products matching tag Candy Making Supplies">Candy Making Supplies</a>
+			</li>
+			<li>
+				<a href="/collections/cookware/commercial-cookware" title="Show products matching tag Commercial Cookware">Commercial Cookware</a>
+			</li>
+			<li>
+				<a href="/collections/cookware/organizational-supplies" title="Show products matching tag Organizational Supplies">Organizational Supplies</a>
+			</li>
+			<li>
+				<a href="/collections/cookware/professional-cutlery" title="Show products matching tag Professional Cutlery">Professional Cutlery</a>
+			</li>
+		</ul><!-- collection image & description -->
+		<div class="row collection_info">
+			<div class="col-sm-3 collection_img"><img alt="Cookware" src="//cdn.shopify.com/s/files/1/1398/6279/collections/carter_cocktail_shaker_1_medium.png?v=1469534060"></div>
+			<div class="col-sm-9 collection_desc">
+				<div class="rte">
+					There is a common opinion that customer care service makes 90% of your reputation and we believe this to be a business truth. That’s why we are proud to inform you that you can always rely on our wonderful support system that is available 24/7. Every business is very demanding but the secret of success lies between the right choice of the business strategy and reliable suppliers.Those were the times when people still preferred to buy products at brick-and-mortar stores instead of buying online. Nevertheless we’ve decided to create an online shop and we are so glad to welcome you here. Kitchen Supplies store was founded by several enthusiasts in 2002.Taking care of our clients was and still is a main aim of our company and it will stay the same till the end of days.
 				</div>
 			</div>
-			<% end %>
-			
+		</div><!-- products sorting -->
+		<div class="loader_off" id="product_listing_preloader">
+			<div class="global_loader"></div>
 		</div>
+		<div id="collection_sorted" style="opacity: 1;">
+			<div class="product_listing_main">
+				<% @products.each do |product| %>
+					<%= render "/pages/product_row", product: product, order_item: @order_item %>
+				<% end %>
+			</div>
 		</div>
-</div>
-
-<div class="sidebar col-sm-3 sidebar_left col-sm-pull-9">
-   <%= render '/shared/navleft' %>
-</div>
+	</div>
+	<div class="sidebar col-sm-3 sidebar_left col-sm-pull-9">
+		<%= render '/shared/navleft' %>
+	</div>

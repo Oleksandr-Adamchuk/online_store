@@ -1,10 +1,10 @@
 jQuery(function($) {
 	$('html').removeClass('no-js');
 	$(document).ready(function($) {
-		alert('Slider!')
+		
 		var mySwiper = new Swiper('#swiper', {
 			effect: 'fade',
-			autoplay: 30000,
+			autoplay: 3000,
 			loop: true,
 			speed: 500,
 			autoplayDisableOnInteraction: false,

@@ -1,22 +1,45 @@
-<div class="well">
-
-  <div class="row">
-    <div class="col-xs-8">
-      <h4><%= product.name %></small></h4>
-    </div>
-    <div class="col-xs-4">
-
-      <%= form_for order_item, remote: true do |f| %>
-      <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
-        <div class="input-group">
-          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-          <div class="input-group-btn">
-            <%= f.hidden_field :product_id, value: product.id %>
-            <%= f.submit "Add to Cart", class: "btn btn-primary" %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-  </div>
-</div>
+<div class="product col-xs-6 col-sm-6 col-md-4 product_collection item3_1 item2_1">
+				<div class="product_wrapper">
+					<div class="product_img">
+						<div class="img_change"> 
+								<span class="img_change_wrapper">
+									<!-- Підтягнути фотки з бази -->
+									<%= link_to image_tag(product.image), product_path(product), {alt: 'Carter Cocktail Shaker'} %>
+									<%= link_to image_tag(product.image_2), product_path(product), {alt: 'Carter Cocktail Shaker', class: 'img__2', style: 'opacity: 0;'} %>
+								</span> 
+								<span class="product_badge new">New</span>
+						</div>
+					
+					</div>
+					<div class="product_info">
+						<div class="product_price">
+							<span class="money"><%= number_to_currency(product.price) %></span>
+						</div>
+						<div class="product_name">
+							<%= link_to product.name, product_path(product), title: "Carter Cocktail Shaker" %>
+							
+						</div>
+						<div class="product_desc product_desc__short">
+							<%= truncate(product.description, length: 60) %>
+						
+						</div>
+						
+						<div class="product_links">
+							<!-- СТВОРИТИ ФОРМУ НА КНОПКУ КОРЗИНИ !!!!!!! -->
+							<%= form_for order_item, remote: true do |f| %>
+                <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
+                 <div class="input-group">
+                  <%= f.number_field :quantity, value: 1, class: "form-control", min: 1, style: 'width: 60px' %>
+                 <div class="input-group-btn">
+              <%= f.hidden_field :product_id, value: product.id %>
+              <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+              </div>
+                </div>
+              <% end %>
+             
+      
+						
+						</div>
+					</div>
+				</div>
+			</div>
