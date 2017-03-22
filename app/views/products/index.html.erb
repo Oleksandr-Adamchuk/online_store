@@ -1,6 +1,7 @@
 <div class="main_content col-sm-9 col-sm-push-3">
 		<p id="notice"><%= notice %></p>
 		<h1>Products</h1>
+		<% if current_user.try(:admin?) %>
 		<table>
 			<thead>
 				<tr>
@@ -31,6 +32,7 @@
 			</tbody>
 		</table><br>
 		<%= link_to 'New Product', new_category_path %>
+		<% end %>
 		<h1 class="page_heading">Cookware</h1>
 		<ul class="tags clearfix">
 			<li class="active">
