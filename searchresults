@@ -1,0 +1,24 @@
+Searching for theme262 in/myapp/app/views/shared (Found 18 matches in 1 file)
+
+/myapp/app/views/shared/_navtop.html.erb:
+	36: 								<a class="level_1_link sf-with-ul" href="#">Blog <i class="level_1_trigger"></i></a>
+	43: 													<h4 class="blog_title"><a href="#">The secret of success lies between th...</a></h4>
+	52: 													<h4 class="blog_title"><a href="#">Welcome you here, at our online Kitch...</a></h4>
+	61: 													<h4 class="blog_title"><a href="#">Support system that is available 24/7.</a></h4>
+	70: 													<h4 class="blog_title"><a href="#">Kitchen Supplies store was founded by...</a></h4>
+	81: 								<a class="level_1_link sf-with-ul" href="#">Sale <i class="level_1_trigger"></i></a>
+	87: 													<a href="#"><img alt="Batter Dispenser" src="/assets/batter_dispenser_1_large.png"></a>
+	94: 														<a href="#">Batter Dispenser</a>
+	108: 													<a href="#"><img alt="Boston Shaker" src="/assets/boston_shaker_1_large.png"></a>
+	115: 														<a href="#">Boston Shaker</a>
+	122: 															<a class="btn btn_big quick_view_btn" href="#" title="Add to cart"><i class="icon material-design-shopping232"></i>Add to cart</a>
+	129: 													<a href="#"><img alt="Carter Cocktail Shaker" src="/assets/carter_cocktail_shaker_1_large.png"></a>
+	136: 														<a href="#">Carter Cocktail Shaker</a>
+	150: 													<a href="#"><img alt="Carter Double Walled Ice Bucket" src="/assets/carter_double_walled_ice_bucket_1_large.png"></a>
+	157: 														<a href="#">Carter Double Walled Ice Bucket</a>
+	164: 															<a class="btn btn_big quick_view_btn" href="#" title="Add to cart"><i class="icon material-design-shopping232"></i>Add to cart</a>
+	174: 								<a class="level_1_link" href="#">About us</a>
+	177: 								<a class="level_1_link" href="#">Contact us</a>
+
+Found 18 matches in 1 file 
+

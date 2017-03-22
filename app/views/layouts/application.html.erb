@@ -39,7 +39,10 @@
 		<div class="header_right">
 			<!-- USER MENU -->
 			<ul class="header_user">
-				<li><a href="#">Checkout</a></li>
+				<li>
+					<%= link_to 'Checkout', new_order_path%>
+					
+					</li>
 							<!-- <li class="wishlist"><a href="/pages/wishlist">Wishlist</a></li> -->
 					
 				<li class="checkout">
@@ -50,8 +53,10 @@
 					<% end %>
 				</li>
 			</ul>
-			
-			
+		
+		<% if current_user.try(:admin?) %>
+		 <span style="color: red; font-weight: bold;">Hello, Admin!</span>
+		<% end %>
 			
 			<!-- HEADER CUSTOM BLOCK -->
 			<div class="header_custom">
@@ -70,6 +75,7 @@
 		<div class="container">
 			<div class="row">
 				<%= render '/shared/navtop', object: @category %>
+				<p id="notice" style="color:green; font-weight: bold; float:right"><%= notice %></p>
 			     <%= yield %>
 			   
 			     

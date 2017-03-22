@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show]
+  
+  # before_filter do 
+  #   redirect_to :new_user_session_path unless current_user && current_user.admin?
+  # end
   # GET /products
   # GET /products.json
   def index
@@ -63,6 +68,16 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def authenticate_admin!
+    # check if current user is admin
+    unless current_user.admin
+      # if current_user is not admin redirect to some route
+      redirect_to new_user_session_path
+    end
+    # if current_user is admin he will proceed to edit action
+  end
+ 
 
   private
     # Use callbacks to share common setup or constraints between actions.

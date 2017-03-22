@@ -4,10 +4,17 @@ class Order < ApplicationRecord
   #before_create :set_order_status
   before_validation :set_order_status
   before_save :update_subtotal
-
+  # validates :name, :address, :email, presence: true
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
   end
+  
+  # def add_line_items_from_cart(order_items)
+  #   order_items.each do |item|
+  #   # order_items << item
+  #   end
+  # end
+  
 private
   def set_order_status
     self.order_status_id = 1

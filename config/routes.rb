@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'order_items/destroy'
 
   get 'carts/show'
+  resources :orders
 
   resources :categories do
     resources :products, only: [:index, :new, :create]
