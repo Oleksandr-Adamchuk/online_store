@@ -3845,7 +3845,11 @@ body {
 h1.cart-text {    
     margin-top: 0;
 }
-
+.logo_bg {
+    background-image: asset-data-url("logo.png");
+    width: 200px;
+    height: 51px;
+}
 
 
 
