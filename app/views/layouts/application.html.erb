@@ -76,16 +76,12 @@
 			<div class="row">
 				<%= render '/shared/navtop', object: @category %>
 				<p id="notice" style="color:green; font-weight: bold; float:right"><%= notice %></p>
-			     <%= yield %>
-			   
 			     
-			     <div class="col-xs-6">
-	      		  <h1><%= link_to "My Store", root_path %></h1>
-	     		 </div>
-		      
-			
-			</div>
+			     <%= yield %>
+			 
+			 </div>
 		</div>
 	</div>
+	<%= render 'shared/footer' %>
 </body>
 </html>
