@@ -22,11 +22,9 @@
 	<div class="flexbox">
 		<!-- LOGO -->
 		<div id="logo" class="logo_main">
-			<%= link_to image_tag("/assets/logo.png"), root_path, alt: 'Cook' %>
-	
-  			
-			
-			
+			<%= link_to root_path do %>
+				<%= image_tag("/assets/logo.png", alt: 'Cook') %>
+			<% end %>
 		</div>
 		<!-- HEADER SEARCH -->
 		<div class="header_search">
