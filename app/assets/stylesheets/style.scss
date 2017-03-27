@@ -3850,28 +3850,34 @@ h1.cart-text {
     width: 200px;
     height: 51px;
 }
-.swiper-slide .swiper-slide-duplicate {
+// #swiper_1 {
+//      background-image: asset-data-url("slide3_image.jpg");
+//     width: 870px;
+//     height: 380px;
+// }
+
+
+#swiper_1 {
     background-image: asset-data-url("slide3_image.jpg");
     width: 870px;
     height: 380px;
 }
-
-.swiper-slide .swiper-slide-prev {
+#swiper_2 {
     background-image: asset-data-url("slide1_image.jpg");
     width: 870px;
     height: 380px;
 }
-.swiper-slide .swiper-slide-active {
+#swiper_3 {
     background-image: asset-data-url("slide2_image.jpg");
-    wwidth: 870px;
+    width: 870px;
     height: 380px;
 }
-.swiper-slide .swiper-slide-next {
+#swiper_4 {
     background-image: asset-data-url("slide3_image.jpg");
     width: 870px;
     height: 380px;
 }
-.swiper-slide .swiper-slide-duplicate {
+#swiper_5 {
     background-image: asset-data-url("slide1_image.jpg");
     width: 870px;
     height: 380px;
