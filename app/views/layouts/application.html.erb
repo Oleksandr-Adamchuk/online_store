@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link media="all" type="text/css" rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
@@ -29,6 +30,7 @@
 		<!-- HEADER SEARCH -->
 		<div class="header_search">
 			<form action="/search" method="get" class="search_form">
+				<i class="material-icons">search</i>
 				<input value="Search store" id="search-field" name="q" placeholder="Search store" class="hint" type="text">
 				<button id="search-submit" type="submit" class="btn">Search</button>
 			</form>
@@ -39,10 +41,8 @@
 			<ul class="header_user">
 				<li>
 					<%= link_to 'Checkout', new_order_path%>
-					
-					</li>
+				</li>
 							<!-- <li class="wishlist"><a href="/pages/wishlist">Wishlist</a></li> -->
-					
 				<li class="checkout">
 					<% if user_signed_in? %>
 						<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
@@ -58,10 +58,8 @@
 			
 			<!-- HEADER CUSTOM BLOCK -->
 			<div class="header_custom">
-				
-					<span class="icon material-design-phone370"></span>
-				
-				<a href="callto:800-2345-6789">800-2345-6789</a>
+				  <i class="material-icons">phone</i>
+					<a href="callto:800-2345-6789">800-2345-6789</a>
 			</div>
 			
 		</div>

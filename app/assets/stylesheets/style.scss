@@ -1084,11 +1084,12 @@ body {
     width: 100px;
 }
 .scheme_1 header {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
     padding-top: 25px;
 }
 .scheme_1 header .flexbox {
     justify-content: space-between;
+    
 }
 .scheme_1 header .flexbox::before, .scheme_1 header .flexbox::after {
     width: 0;
@@ -1192,12 +1193,12 @@ body {
     margin-top: 10px;
     text-align: right;
 }
-.scheme_1 .header_custom .icon {
+.scheme_1 .header_custom .material-icons {
     color: #4bae4f;
     font-size: 29px;
     line-height: 2px;
     margin-right: 4px;
-    vertical-align: -3px;
+    vertical-align: -7px;
 }
 .scheme_1 .header_custom a {
     color: #374046;
@@ -1218,12 +1219,11 @@ body {
     position: relative;
     width: 100%;
 }
-.scheme_1 .header_search form::before {
+
+.scheme_1 .header_search form .material-icons {
     border-right: 1px solid #ececec;
     bottom: 9px;
     color: #6c7b84;
-    content: "";
-    font-family: "material-design";
     font-size: 25px;
     left: 0;
     line-height: 22px;
